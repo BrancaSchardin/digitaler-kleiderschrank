@@ -4,74 +4,102 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digitaler Kleiderschrank — Personal Wardrobe Organizer</title>
-  <meta name="description" content="Digitaler Kleiderschrank is a personal wardrobe organizer that helps you catalog what you own and discover similar pieces to shop." />
+  <meta name="description" content="A personal wardrobe organizer that helps you catalog what you own and discover similar pieces to shop." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f7f5f2;
-      --card: #ffffff;
-      --ink: #1f1d1b;
-      --muted: #6b6560;
-      --accent: #b5794b;
-      --line: #e7e2db;
+      --bg: #f5f1ea;
+      --ink: #1b1a18;
+      --muted: #8c837a;
+      --accent: #9a7b4f;
+      --hair: rgba(27, 26, 24, 0.14);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--ink);
+      background:
+        radial-gradient(120% 80% at 50% -10%, #fbf8f2 0%, var(--bg) 55%, #efe9df 100%);
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 24px;
-      line-height: 1.6;
+      padding: 40px 24px;
+      -webkit-font-smoothing: antialiased;
     }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      max-width: 560px;
+    .wrap {
+      max-width: 620px;
       width: 100%;
-      padding: 48px 40px;
       text-align: center;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+      padding: 56px 32px;
+      border: 1px solid var(--hair);
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(2px);
     }
-    .logo {
-      width: 56px; height: 56px;
-      margin: 0 auto 24px;
-      border-radius: 16px;
-      background: var(--accent);
+    .mono {
+      width: 66px; height: 66px;
+      margin: 0 auto 34px;
+      border: 1px solid var(--accent);
+      border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      color: #fff; font-size: 28px;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      font-size: 26px;
+      letter-spacing: 0.04em;
+      color: var(--accent);
     }
-    h1 { font-size: 28px; letter-spacing: -0.02em; margin-bottom: 6px; }
-    .tag { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 24px; }
-    p { color: var(--muted); font-size: 16px; margin-bottom: 16px; }
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-size: clamp(34px, 6vw, 52px);
+      line-height: 1.08;
+      letter-spacing: 0.005em;
+    }
+    .rule {
+      width: 44px; height: 1px;
+      background: var(--accent);
+      margin: 26px auto 24px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 22px;
+    }
+    p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 400;
+      max-width: 440px;
+      margin: 0 auto;
+    }
     .soon {
       display: inline-block;
-      margin-top: 20px;
-      padding: 8px 18px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      font-size: 14px;
-      color: var(--muted);
+      margin-top: 40px;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink);
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--accent);
     }
-    .foot { margin-top: 28px; font-size: 13px; color: var(--muted); }
-    .foot a { color: var(--accent); text-decoration: none; }
   </style>
 </head>
 <body>
-  <main class="card">
-    <div class="logo">👗</div>
-    <h1>Digitaler Kleiderschrank</h1>
-    <div class="tag">Personal Wardrobe Organizer</div>
+  <main class="wrap">
+    <div class="mono">DK</div>
+    <h1>Digitaler&nbsp;Kleiderschrank</h1>
+    <div class="rule"></div>
+    <div class="eyebrow">Personal Wardrobe Organizer</div>
     <p>
-      Catalog the clothing and accessories you already own — all in one place.
-    </p>
-    <p>
-      For any item in your wardrobe, discover similar and complementary pieces
-      available to shop, with links straight to the original listings.
+      Catalogue the pieces you own, and discover similar and complementary
+      items to shop — thoughtfully curated, always in one place.
     </p>
     <span class="soon">Coming soon</span>
   </main>
